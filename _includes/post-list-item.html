@@ -12,8 +12,9 @@
         {% include post-excerpt.html %}
       {% endif %}
     </div>
+    {% assign post_month = post.date | date: "%-m" | plus: 0 %}
     <span class="post-date">
-      {{ post.date | date: "%b %-d, '%y" }}
+      {{ post.date | date: "%-d" }} {{ site.data.es.months_abbr[post_month] }}, &#39;{{ post.date | date: "%y" }}
     </span>
   </a>
 </li>

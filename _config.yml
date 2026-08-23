@@ -16,13 +16,14 @@
 title: Alberto Delgado
 email:
 description: >- # folded block: newlines become spaces
-  El blog personal de Alberto Delgado
+  Mi blog personal
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://albertodelgado.info" # the base hostname & protocol for your site, e.g. http://example.com
 icon: /assets/images/icon-512.png
 twitter_username:
 github_username:
 lang: es
+hide_credits: true
 
 # Build settings
 markdown: kramdown
@@ -30,9 +31,12 @@ markdown: kramdown
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - CODE_OF_CONDUCT.md
+  - LICENSE.txt
+  - hitchens-theme.gemspec
 #   - node_modules
 #   - vendor/bundle/
 #   - vendor/cache/
