@@ -24,8 +24,10 @@ layout: default
     {% if page.author %}
       <div itemprop="author">{{ page.author }}</div>
     {% endif %}
-    {% assign post_month = page.date | date: "%-m" | plus: 0 %}
-    <time class="post-date dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%-d" }} de {{ site.data.es.months[post_month] }} de {{ page.date | date: "%Y" }}</time>
+    {% if page.date %}
+      {% assign post_month = page.date | date: "%-m" | plus: 0 %}
+      <time class="post-date dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%-d" }} de {{ site.data.es.months[post_month] }} de {{ page.date | date: "%Y" }}</time>
+    {% endif %}
   </div>
 
   {% if site.disqus.shortname %}
